@@ -130,7 +130,7 @@ class AllProductsSection extends Component {
         apiStatus: apiStatusConstants.success,
         searchInput: '',
       })
-    } else if (response.status === 401) {
+    } else {
       this.setState({apiStatus: apiStatusConstants.failure})
     }
   }
@@ -234,7 +234,7 @@ class AllProductsSection extends Component {
               type="search"
               className="search"
               placeholder="search"
-              onKeyUp={this.getInput}
+              onKeyDown={this.getInput}
             />
             <BsSearch className="search-icon" />
           </div>
